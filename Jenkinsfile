@@ -2,17 +2,17 @@ pipeline {
     agent any
 
      environment{
-       registryCredential = 'ecr:<zone>:<CredentialID>'
-       appRegistry = "<Registry Name>"
-       capstoneRegistry = "<Registry Url>"
-       cluster = "<Cluster Name>"
-        service = "<Service Name>"
+       registryCredential = 'ecr:ap-south-1:IAM_ID>'
+       appRegistry = "487300558488.dkr.ecr.ap-south-1.amazonaws.com/project202052301"
+       capstoneRegistry = "https://487300558488.dkr.ecr.ap-south-1.amazonaws.com"
+       cluster = "202052301"
+        service = "202052301_service"
    }
 
     stages {
         stage('Clone Website') {
             steps {
-                git url:'https://github.com/Aryanhac/Capstone-Project'
+                git url:'https://github.com/AIABHISHEK/website.git'
             }
         }
 
